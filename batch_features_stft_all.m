@@ -34,5 +34,6 @@ for i=1:length(listing)
   load(listing(i).name,'agg_audio');
 
   [stft.mat,stft.f,stft.t,stft.parameters]=batch_features_stft(agg_audio.data,agg_audio.fs);
+  save(savefile,'stft','-v7.3');
 
 end
