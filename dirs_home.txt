@@ -1,0 +1,5 @@
+#
+#folder for converted files
+
+agg_dir=~/Desktop/Dropbox/Backup/batch_features
+sdi_dir=/stft

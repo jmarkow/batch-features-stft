@@ -1,0 +1,24 @@
+#
+#folder for converted files
+
+convert_dir=/Volumes/industrial_age/workspace/staging_barecarbon/unprocessed
+#agg_dir=/Volumes/industrial_age/workspace/figures/stan/mu_agg
+agg_dir=~/Desktop/Dropbox/Backup/stability_analysis_data/stan
+data_dir=/Volumes/industrial_age/workspace/ephys_barecarbon
+legacy_dir=/Volumes/bronze_age/figures/hvc_fields/data/spikefield_stats
+legacy_int=/int2
+legacy_pn=/pn2
+lfp_dir=/lfp_data
+template_dir=/templates
+control_dir=/controls
+nervecut_dir=/nervecut
+user_dir=/userdata
+nervecut_audio_dir=/nervecut_audio
+fig_dir=/figures_and_stats/figs
+datastore_dir=/figures_and_stats/data
+su_dir=/single_units
+su_plot_dir=/single_units_display
+su_analyze_dir=/single_units_analysis
+lfp_mu_dir=/lfp_mu_data
+ca_dir=/cadata
+sdi_dir=/sdidata
