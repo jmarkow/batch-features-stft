@@ -38,12 +38,12 @@ padding=round(padding*FS);
 
 [T,F]=zftftb_specgram_dim(nsamples,len,overlap,nfft,FS);
 
-FEATURES=zeros(length(F),length(T),ntrials);
+FEATURES=zeros(length(F),length(T),ntrials,'single');
 
 fprintf('\n');
 for i=1:ntrials
 	fprintf('Trials %i of %i\r',i,ntrials)
-	FEATURES(:,:,i)=spectrogram(DATA(padding(1):end-padding(2),i),len,overlap,nfft);
+	FEATURES(:,:,i)=single(spectrogram(DATA(padding(1):end-padding(2),i),len,overlap,nfft));
 end
 
 PARAMETERS.win_size=len;
