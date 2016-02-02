@@ -8,11 +8,7 @@ end
 
 len=20;
 overlap=18;
-
-% TODO: add option to make spectrograms and wavs of all extractions
-
 padding=[.2 .2];
-disp_band=[1 10e3]; % spectrogram display parameters
 
 nparams=length(varargin);
 
@@ -24,6 +20,10 @@ for i=1:2:nparams
 	switch lower(varargin{i})
 		case 'padding'
 			padding=varargin{i+1};
+		case 'len'
+			len=varargin{i+1};
+		case 'overlap'
+			overlap=varargin{i+1};
 	end
 end
 
@@ -47,6 +47,7 @@ for i=1:ntrials
 end
 
 PARAMETERS.win_size=len;
+PARAMETERS.win_nfft=nfft;
 PARAMETERS.win_overlap=overlap;
 PARAMETERS.padding=padding;
 PARAMETERS.fs=FS;
