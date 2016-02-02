@@ -37,15 +37,15 @@ nfft=2^nextpow2(len);
 
 [T,F]=zftftb_specgram_dim(nsamples,len,overlap,nfft,FS);
 
-FEATURES=zeros(length(T),length(F),ntrials);
+FEATURES=zeros(length(F),length(T),ntrials);
 
 fprintf('\n');
 for i=1:ntrials
 	fprintf('Trials %i of %i\r',i,ntrials)
-	FEATURES(:,:,i)=spectrogram(DATA,len,overlap,nfft);
+	FEATURES(:,:,i)=spectrogram(DATA(:,i),len,overlap,nfft);
 end
 
 PARAMETERS.win_size=len;
 PARAMETERS.win_overlap=overlap;
 PARAMETERS.padding=padding;
-PARAMETERS.fs=fs;
+PARAMETERS.fs=FS;

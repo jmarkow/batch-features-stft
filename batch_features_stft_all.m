@@ -15,7 +15,7 @@ listing=robofinch_dir_recurse(pwd,'*.mat');
 
 %
 
-for 1:length(listing)
+for i=1:length(listing)
 
   [pathname,filename,ext]=fileparts(listing(i).name);
 
